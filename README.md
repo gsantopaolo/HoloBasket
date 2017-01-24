@@ -19,7 +19,7 @@ Managers
 Colliders        
 Build and Deploy        
 Spatial Mapping and Gesture        
-[link](#SpatialSound)Spatial Sound     
+[Spatial Sound](#SpatialSound)     
 
 ## Configuring the environment
 
@@ -366,7 +366,7 @@ Fig. 29 Adding Shooter to Main Camera*
 
 To check whether our basket can now move, it is necessary to redo the app deployment on HoloLens, as explained in the section Build and Deploy.
 
-### <a name="SpatialSound"></a>## Spatial Sound
+# <a name="SpatialSound"></a>## Spatial Sound
 
 In the menu bar, select EditProject settings  Audio
 
