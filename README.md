@@ -17,7 +17,8 @@ Positioning the Holograms
 Gaze        
 Managers        
 Colliders        
-Build and Deploy        
+Build and Deploy  
+[SpatialMapping](#SpatialMapping)       
 [Gesture](#Gesture)        
 [Spatial Sound](#SpatialSound)     
 
@@ -264,10 +265,9 @@ Obviously, as the spatial mapping as well as all the functions to move and posit
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/20.gif)
-*
-Fig. 20 The basket as it appears on HoloLens*
+*Fig. 20 The basket as it appears on HoloLens*
 
-# Spatial Mapping and Gesture
+# <a name="SpatialMapping"></a>Spatial Mapping
 
 Sure, it is a nice basket, but it would be even nicer if I could move it around in the room and place it wherever I want: on the table or the floor. Let&#39;s see how to do that.
 
@@ -279,30 +279,30 @@ On the right hand side, click on the Add Component button (Fig. 21) and in the s
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/21.gif)
-*
-Fig. 21 Box Collider*
+
+*Fig. 21 Box Collider*
 
 Modify the Box Collider properties as represented in Fig.22, by setting Center X to -0.7, Center Y to 0.5, Center Z to -1, Size X to 1.5, Size Y to 1 and Size Z to 2.
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/22.gif)
-*
-Fig. 22 Box Collider Properties*
+
+*Fig. 22 Box Collider Properties*
 
 In the Assets panel, expand SpatialMapping  Prefabs, on the right hand side select the object SpatialMapping and drag and drop it in an empty area of the Hierarchy panel, as shown in Fig.23.
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/23.gif)
-*
-Fig. 23 Hierarchy with SpatialMapping*
+
+*Fig. 23 Hierarchy with SpatialMapping*
 
 If during dragging and dropping you accidentally placed SpatialMapping (inside the Hierarchy panel) in a different position, you will need to delete it (by selecting it and pressing Delete on the keyboard) and start over with drag and drop.
 
 In Hierarchy, select Hoop and on the right, in the Inspector panel, click on the Add Component button. In the search box, type &quot;han&quot; and select the Hand Draggable script to add it to the Inspector toolbar as shown in Fig. 24.
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/24.gif)
-*
-Fig. 24 Adding the TapToPlace script*
+
+*Fig. 24 Adding the TapToPlace script*
 
 To check whether the basket can now be moved around, it is necessary to repeat the app&#39;s deployment on HoloLens, as explained in the section Build and Deploy.
 
@@ -319,16 +319,16 @@ In the folder Tools\3D Models of the CD copy the file Basketball.3DS and paste i
 In the Assets panel right-click on an empty area, select Create  Physic Material  and name it &quot;Bouncy&quot;, as shown in Fig. 25.
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/25.gif)
-*
-Fig. 25 Create a new Physics material*
+
+*Fig. 25 Create a new Physics material*
 
 In the Inspector panel set properties for Bouncy as shown in Fig. 26
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/26.gif)
-*
-Fig. 26 Bouncy - Settings
-*
+
+*Fig. 26 Bouncy - Settings*
+
 Go to C:\0BaseAssets\ folder and copy Basketball.3DS. Paste it in the folder C:\HoloBasket\Assets
 
 Back in Unity, In the Assets panel, select the &quot;Basketball&quot; object and drag and drop it in an empty area of the Hierarchy panel. Select the object just created and drag and drop it in the Assets panel again so to create a prefab object. Then select the Basketball object in the Hierarchy panel and delete it.
@@ -337,8 +337,8 @@ At the end of the procedure, both Hierarchy panel and Assets panel will have to 
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/27.gif)
-*
-Fig. 27 Creating the prefab object Basketball*
+
+*Fig. 27 Creating the prefab object Basketball*
 
 Select, in the Assets panel, the prefab object Basketball and set Scale X, Y and Z to 0.0018, then untick the box Receive Shadows as shown in Fig. 27.
 
@@ -348,8 +348,8 @@ In the Inspector panel, click on the Add Component button, in the search box typ
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/28.gif)
-*
-Fig. 28 Inspector panel for the prefab object Basketball*
+
+*Fig. 28 Inspector panel for the prefab object Basketball*
 
 Once added the Sphere Collider it will be necessary to choose Bouncy as Material.
 
@@ -361,8 +361,8 @@ In the Assets panel select the prefab object Basket and drag and drop it in the 
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/29.gif)
-*
-Fig. 29 Adding Shooter to Main Camera*
+
+*Fig. 29 Adding Shooter to Main Camera*
 
 To check whether our basket can now move, it is necessary to redo the app deployment on HoloLens, as explained in the section Build and Deploy.
 
@@ -382,8 +382,8 @@ Here you will need to tick the box Spatialize and set the value of Spatial Blend
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/30.gif)
-*
-Fig. 30 Adding Spatial Sound to the basketball*
+
+*Fig. 30 Adding Spatial Sound to the basketball*
 
 Our work is now done.
 
