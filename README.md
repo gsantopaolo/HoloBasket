@@ -1,4 +1,4 @@
-# HoloBasket - Developing your First Holographic App with Unity
+﻿# HoloBasket - Developing your First Holographic App with Unity
 
 To develop our first HoloLens app we will use Unity 3D and Visual Studio.
 
@@ -10,19 +10,20 @@ The app we will develop consists in a basket which can be freely moved in our en
 
 Alright, let&#39;s start.
 
-# Contents #
-Configuring the environment       
-Preparing a Scene for Holographic Content       
-Positioning the Holograms       
-Gaze        
-Managers        
-Colliders        
-Build and Deploy  
-[SpatialMapping](#SpatialMapping)       
+# Contents #  
+[Configuring the environment](#Configuringtheenvironment)   
+[Preparing a Scene for Holographic Content](#PreparingaSceneforHolographicContent)      
+[Positioning the Holograms](#PositioningtheHolograms)      
+[Gaze](#Gaze)      
+[Managers](#Managers) 
+[Colliders](#Colliders)  
+[Build and Deploy](#SpatialMapping)  
+[Spatial Mapping](#SpatialMapping)       
 [Gesture](#Gesture)        
 [Spatial Sound](#SpatialSound)     
 
-## Configuring the environment
+
+# <a name="Configuringtheenvironment"></a>Configuring the environment
 
 The first thing to do is to launch Unity. If you never used it before, you will need to log in and create a new project by clicking on &quot;New&quot; as shown in Fig. 1.
 
@@ -45,8 +46,8 @@ At this point it will be necessary to configure the project with the assets you 
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/3.gif)
-*
-Fig. 3 Copying selected contet of the Assets folder*
+
+*Fig. 3 Copying selected contet of the Assets folder*
 
 You have now to past the contet in your C:\HoloBasket\Assets folder
 
@@ -55,7 +56,7 @@ Going back to Unity, you may notice that the editor is configuring the HoloToolk
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/4.gif)
 
-Fig. 4 Unity configures HoloToolkit
+*Fig. 4 Unity configures HoloToolkit*
 
 Once this process is complete, you will notice a new item, &quot;HoloToolkit&quot;, in the menu bar.
 
@@ -66,15 +67,15 @@ Once this process is complete, you will notice a new item, &quot;HoloToolkit&quo
 
 Now, from the HoloToolkit menu, select:
 
-ConfigureApply HoloLens Scene Settings
+Configure-->Apply HoloLens Scene Settings
 
 then
 
-Configure  Apply HoloLens Capability Setting
+Configure --> Apply HoloLens Capability Setting
 
 Last but not lease
 
-Configure  Apply HoloLens Project Settings
+Configure --> Apply HoloLens Project Settings
 
 
 
@@ -82,19 +83,19 @@ The editor will first ask whether you want to force text serialization of assets
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/6.gif)
-*
-Fig. 6 force text serialization of assets*
+
+*Fig. 6 force text serialization of assets*
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/7.gif)
-*
-Fig. 7 Reload Now*
+
+*Fig. 7 Reload Now*
 
 With this procedure, you first configured the Main Camera so to make it render as background the color black (which in HoloLens represents the transparent color) and then we configured the project so that it yields a Windows Store App as output.
 
-Save the scene, File  Save Scene by naming it &quot;Basket&quot;.
+Save the scene, File --> Save Scene by naming it &quot;Basket&quot;.
 
-Now let&#39;s go to File  Build settings
+Now let&#39;s go to File --> Build settings
 
 Click on Add Open Scenes
 
@@ -104,25 +105,26 @@ Click on Player Settings (Fig. 8)
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/8.gif)
-*
-Fig. 8 Build Settings*
+
+*Fig. 8 Build Settings*
 
 This will open, in the Inspector panel, the Player Settings (Fig. 9)
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/9.gif)
-*
-Fig. 9 Player Settings in the Inspector panel*
+
+*Fig. 9 Player Settings in the Inspector panel*
 
 Here all the work has already be done HoloToolkit already, you can just have a look, for example, at the Capabilities inside the Publishing Settings and you will notice that needed capabilities are alredy setup
 
-At this point you only need to check the Quality Settings. From the menu bar, select Edit Project Settings  Quality
+At this point you only need to check the Quality Settings. From the menu bar, select Edit--> Project Settings --> Quality
 
 The Quality Settings will open in the Inspector panel, but also here HoloToolkit has already configured everything, namely the quality level, on fastest.
 
 All we need to do now is start developing our project.
 
-## Preparing a Scene for Holographic Content
+
+# <a name="PreparingaSceneforHolographicContent"></a>Preparing a Scene for Holographic Content
 
 Create a new Scene: File -&gt; New Scene
 
@@ -130,13 +132,12 @@ Remove the default Main Camera and Directional Light objects in the scene.
 
 Add the HoloLensCamera.prefab (found under HoloToolkit/Input/Prefabs).
 
-To do so, in the lower part of the Project toolbar, select AssetsHoloToolkitInputPrefabs, on the right hand side select HoloLensCamera and drag and drop it to the right in an empty area of the Hierarchy panel
+To do so, in the lower part of the Project toolbar, select Assets-->HoloToolkit-->Input-->Prefabs, on the right hand side select HoloLensCamera and drag and drop it to the right in an empty area of the Hierarchy panel
 
-Add the DefaultCursor, in the lower part of the Project toolbar, select AssetsHoloToolkitInputPrefabsCursor, on the right hand side select DefaultCursor and drag and drop it to the right in an empty area of the Hierarchy panel.
+Add the DefaultCursor, in the lower part of the Project toolbar, select Assets-->HoloToolkit-->Input-->Prefabs-->Cursor, on the right hand side select DefaultCursor and drag and drop it to the right in an empty area of the Hierarchy panel.
 
 
-
-## Positioning the Holograms
+# <a name="PositioningtheHolograms"></a>Positioning the Holograms
 
 Going back to the path where you donloaded this repo you will find a folder named &quot;0BaseAssets&quot;, inside this folder you will find the 3D objects, you will need to copy the file Hoop.3ds and paste it in the folder: C:\HoloBasket\Assets
 
@@ -144,9 +145,8 @@ Back in Unity, you can notice how in the Project panel, in the Assets folder, ou
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/10.gif)
-*
-Fig. 10 The basket in the Assets folder*
 
+*Fig. 10 The basket in the Assets folder*
 
 
 Right-click in an empty area of the Hierarchy panel, on the left-hand side, and select Create Empty (Fig. 11).
@@ -155,8 +155,8 @@ Right-click on the GameObject just created, select Rename and change the object 
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/11.gif)
-*
-Fig. 11. Hierarchy panel*
+
+*Fig. 11. Hierarchy panel*
 
 In the Assets panel, select the object Hoop and drag and drop it into the Hierarchy panel, exactly over the GameObject HologramCollection, so that Hoop is added as child item of this object, as shown in Fig. 12.
 
@@ -164,8 +164,8 @@ If during dragging and dropping you accidentally placed Hoop in a different posi
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/12.gif)
-*
-Fig. 12 Hoop as child item of HologramCollection*
+
+*Fig. 12 Hoop as child item of HologramCollection*
 
 Once placed Hoop as child item of HologramCollection in the Hierarchy panel, select HologramCollection and go to the Inspector panel on the left.
 
@@ -173,8 +173,8 @@ Let&#39;s move our object so that it appears in front of the user when he wears 
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/13.gif)
-*
-Fig. 13 Modified position for HologramCollection*
+
+*Fig. 13 Modified position for HologramCollection*
 
 This way, our hologram will be positioned 0.5 meters below and 2 meters in front of the user&#39;s head (when the application is launched).
 
@@ -183,35 +183,34 @@ Set Rotation so that X and Z will be 0 and Y to 180
 Now select Hoop in the Hierarchy panel and change the Scale values in the Inspector panel by setting X, Y and Z to 0.3, so that our model will have the right proportions once represented in HoloLens.
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/14.gif)
-*
-Fig. 14 Hoop Scale*
+
+*Fig. 14 Hoop Scale*
 
 
-
-## Gaze
+# <a name="Gaze"></a>Gaze
 
 At this point you can start adding some interactive functions to your hologram by showing a cursor which will represent the Gaze, the direction of your head when wearing HoloLens.
 
 First you will need to add a cursor to your scene (Basket), so that the cursor will show the user where he is pointing his Gaze.
 
-To do so, in the lower part of the Project toolbar, select AssetsHoloToolkitInputPrefabsCursor, on the right hand side select Cursor and drag and drop it to the right in an empty area of the Hierarchy panel (Fig. 15).
+To do so, in the lower part of the Project toolbar, select Assets-->HoloToolkit-->Input-->Prefabs-->Cursor, on the right hand side select Cursor and drag and drop it to the right in an empty area of the Hierarchy panel (Fig. 15).
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/15.gif)
-*
-Fig. 15 Hierarchy panel with Cursor*
+
+*Fig. 15 Hierarchy panel with Cursor*
 
 
 
 If during dragging and dropping you accidentally placed Cursor in a different position, you will need to delete it (by selecting it and pressing Delete on the keyboard) and start over with drag and drop.
 
-## Managers
+# <a name="Managers"></a>Managers
 
 Right-click in an empty area of the Hierarchy panel on the left, and select Create Empty (Fig. 11).
 
 Right-click on the GameObject just created, select Rename and change the object name to Managers.
 
-In the Assets panel below, select AssetsHoloToolkitInputPrefabs, then on the right select InputManager and drag and drop it on the right in the Hierarchy panel so that the script is added as child item of Managers (Fig. 16).
+In the Assets panel below, select Assets-->HoloToolkit-->Input-->Prefabs, then on the right select InputManager and drag and drop it on the right in the Hierarchy panel so that the script is added as child item of Managers (Fig. 16).
 
 Create an empty object in your scene and make sure its transform is zeroed on the origin. Rename it &#39;Managers&#39;.
 
@@ -221,23 +220,23 @@ Add an Event System to your scene by right click on &#39;Managers&#39; object in
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/16.gif)
-**
-Fig. 16 Managers and GazeManager**
+
+*Fig. 16 Managers and GazeManager*
 
 If during dragging and dropping you accidentally placed GazeManager (inside the Hierarchy panel) in a different position, you will need to delete it (by selecting it and pressing Delete on the keyboard) and start over with drag and drop.
 
 
-## Colliders
+# <a name="Colliders"></a>Colliders
 
-As last step, let&#39;s add some interactivity to the object. To do so, go to the Project toolbar, select AssetsHoop and in the Inspector panel tick the box Generate Colliders.
+As last step, let&#39;s add some interactivity to the object. To do so, go to the Project toolbar, select Assets-->Hoop and in the Inspector panel tick the box Generate Colliders.
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/17.gif)
-*
-Fig. 17 Generate Colliders*
+
+*Fig. 17 Generate Colliders*
 
 
 
-## Build and Deploy
+# <a name="BuildandDeploy"></a>Build and Deploy
 
 Thanks to HoloToolkit, it is now extremely easy to create the package necessary to deploy and launch the application on HoloLens (connected to the PC on which you are working through a USB connection).
 
@@ -245,8 +244,8 @@ In the HoloToolKit menu, select Build Window, fill in the username and password 
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/18.gif)
-*
-Fig. 18 Build and deploy on HoloLens*
+
+*Fig. 18 Build and deploy on HoloLens*
 
 And all done. Just a few seconds for the APPX package to be created and deployed on your device and the app that you just developed will appear on your HoloLens.
 
@@ -254,9 +253,8 @@ From the start menu, Gaze on the HoloBasket icon (Fig. 19), then Air Tap. The ap
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/19.gif)
-*
-Fig. 19 Gaze on HoloBasket
-*
+
+*Fig. 19 Gaze on HoloBasket*
 
 
 Once the application is launched, you will see the basket. If you move your Gaze from the basket to a non-virtual object you will see the cursor change shape and color, therefore everything done so far works perfectly.
@@ -289,7 +287,7 @@ Modify the Box Collider properties as represented in Fig.22, by setting Center X
 
 *Fig. 22 Box Collider Properties*
 
-In the Assets panel, expand SpatialMapping  Prefabs, on the right hand side select the object SpatialMapping and drag and drop it in an empty area of the Hierarchy panel, as shown in Fig.23.
+In the Assets panel, expand SpatialMapping --> Prefabs, on the right hand side select the object SpatialMapping and drag and drop it in an empty area of the Hierarchy panel, as shown in Fig.23.
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/23.gif)
@@ -316,7 +314,7 @@ Go to C:\0BaseAssets\ folder and copy Shooter.cs. Paste it in the folder C:\Holo
 
 In the folder Tools\3D Models of the CD copy the file Basketball.3DS and paste it in the folder C:\HoloBasket\Assets
 
-In the Assets panel right-click on an empty area, select Create  Physic Material  and name it &quot;Bouncy&quot;, as shown in Fig. 25.
+In the Assets panel right-click on an empty area, select Create --> Physic Material  and name it &quot;Bouncy&quot;, as shown in Fig. 25.
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/25.gif)
 
@@ -368,7 +366,7 @@ To check whether our basket can now move, it is necessary to redo the app deploy
 
 # <a name="SpatialSound"></a>Spatial Sound
 
-In the menu bar, select EditProject settings  Audio
+In the menu bar, select Edit-->Project settings --> Audio
 
 In the Inspector panel, on the right, set the property Spatializer Plugin to MS HRTF Spatializer
 
