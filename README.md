@@ -18,7 +18,7 @@ Gaze
 Managers        
 Colliders        
 Build and Deploy        
-Spatial Mapping and Gesture        
+[Gesture](#Gesture)        
 [Spatial Sound](#SpatialSound)     
 
 ## Configuring the environment
@@ -310,7 +310,7 @@ Hooray, if you now move the Gaze to the base of the basket and Air Tap on it, yo
 
 Let&#39;s now turn our attention to the ball so that we can shoot some hoops.
 
-# Gesture
+# <a name="Gesture"></a>Gesture
 
 Go to C:\0BaseAssets\ folder and copy Shooter.cs. Paste it in the folder C:\HoloBasket\Assets
 
@@ -366,7 +366,7 @@ Fig. 29 Adding Shooter to Main Camera*
 
 To check whether our basket can now move, it is necessary to redo the app deployment on HoloLens, as explained in the section Build and Deploy.
 
-# <a name="SpatialSound"></a>## Spatial Sound
+# <a name="SpatialSound"></a>Spatial Sound
 
 In the menu bar, select EditProject settings  Audio
 
