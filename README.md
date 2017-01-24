@@ -11,7 +11,6 @@ The app we will develop consists in a basket which can be freely moved in our en
 Alright, let&#39;s start.
 
 # Contents #
-Holograms and Gaze
 Configuring the environment       
 Preparing a Scene for Holographic Content       
 Positioning the Holograms       
@@ -20,7 +19,7 @@ Managers
 Colliders        
 Build and Deploy        
 Spatial Mapping and Gesture        
-Spatial Sound     
+[link](#SpatialSound)Spatial Sound     
 
 ## Configuring the environment
 
@@ -367,7 +366,7 @@ Fig. 29 Adding Shooter to Main Camera*
 
 To check whether our basket can now move, it is necessary to redo the app deployment on HoloLens, as explained in the section Build and Deploy.
 
-# Spatial Sound
+### <a name="SpatialSound"></a>## Spatial Sound
 
 In the menu bar, select EditProject settings  Audio
 
