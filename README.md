@@ -335,6 +335,7 @@ In the Assets panel select the prefab object Basket and drag and drop it in the 
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/29.gif)
+
 Fig. 29 Adding Shooter to Main Camera
 
 To check whether our basket can now move, it is necessary to redo the app deployment on HoloLens, as explained in the section Build and Deploy.
