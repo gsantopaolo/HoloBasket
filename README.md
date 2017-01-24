@@ -1,4 +1,4 @@
-﻿# HoloBasket - Developing your First Holographic App with Unity
+# HoloBasket - Developing your First Holographic App with Unity
 
 To develop our first HoloLens app we will use Unity 3D and Visual Studio.
 
@@ -17,7 +17,7 @@ Alright, let&#39;s start.
 [Gaze](#Gaze)      
 [Managers](#Managers) 
 [Colliders](#Colliders)  
-[Build and Deploy](#SpatialMapping)  
+[Build and Deploy](#BuildandDeploy)  
 [Spatial Mapping](#SpatialMapping)       
 [Gesture](#Gesture)        
 [Spatial Sound](#SpatialSound)     
