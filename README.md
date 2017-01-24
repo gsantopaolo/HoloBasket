@@ -28,16 +28,16 @@ The first thing to do is to launch Unity. If you never used it before, you will 
 
 
 ![fig1](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/1.gif)
-*
-Fig. 1 New Project*
+
+*Fig. 1 New Project*
 
 
 In the next screen (Fig. 2), as &quot;Project name&quot; enter &quot;HoloBasket&quot;, as location assign C:\ (Unity will automatically create for us the HoloBasket folder) and leave the rest unchanged.
 
 
 ![](https://raw.githubusercontent.com/gsantopaolo/HoloBasket/master/0BaseAssets/Images/2.gif)
-*
-Fig. 2 Assigning a project name*
+
+*Fig. 2 Assigning a project name*
 
 By clicking on the &quot;Create Project&quot; button you will create the project.
 
